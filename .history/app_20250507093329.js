@@ -5,16 +5,19 @@
 
 // //pra exibir na tela
 // console.log();
+const readline = require('readline-sync');
+
 const readline = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
 function removerVogais(texto) {
-  return texto.replace(/[aeiou]/gi, '');
+  return texto.replace(/[aeiouáéíóúâêîôûãõàèìòùäëïöü]/gi, '');
 }
 
-readline.question('Digite seu texto: ', (texto) => {
-  console.log('\nResultado:', removerVogais(texto));
+readline.question('Digite um texto e pressione ENTER: ', (texto) => {
+  const textoSemVogais = removerVogais(texto);
+  console.log('Texto sem vogais:', textoSemVogais);
   readline.close();
 });

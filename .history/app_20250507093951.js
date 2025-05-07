@@ -11,7 +11,7 @@ const readline = require('readline').createInterface({
 });
 
 function removerVogais(texto) {
-  return texto.replace(/[aeiou]/gi, '');
+  return texto.replace(/[aeiouáéíóúâêîôûãõàèìòùäëïöü]/gi, '');
 }
 
 readline.question('Digite seu texto: ', (texto) => {

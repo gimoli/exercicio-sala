@@ -5,13 +5,15 @@
 
 // //pra exibir na tela
 // console.log();
+const readline = require('readline-sync');
+
 const readline = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
 function removerVogais(texto) {
-  return texto.replace(/[aeiou]/gi, '');
+  return texto.replace(/[aeiouáéíóúâêîôûãõàèìòùäëïöü]/gi, '');
 }
 
 readline.question('Digite seu texto: ', (texto) => {
