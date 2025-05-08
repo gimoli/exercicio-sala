@@ -1,4 +1,4 @@
-const readline = require("readline-sync");
+// const readline = require("readline-sync");
 
 // //pra receber valor
 // readline.question('Ola, mundo?');
@@ -20,6 +20,13 @@ const readline = require("readline-sync");
 // });
 
 
+const readline = require("readline"); // importa o módulo
+
+const rl = readline.createInterface({ // cria a interface
+  input: process.stdin,
+  output: process.stdout,
+});
+
 const menuDeCadastro = () => {
   console.log(
     `
@@ -30,24 +37,28 @@ const menuDeCadastro = () => {
     `
   );
 
-  const menu = readline.question("Digite uma opção: ").toUpperCase();
+  rl.question("Digite uma opção: ", (resposta) => {
+    const menu = resposta.toUpperCase();
 
-  switch (menu) {
-    case "C":
-      console.log("Cadastrar");
-      break;
-    case "R":
-      console.log("Ler");
-      break;
-    case "U":
-      console.log("Atualizar");
-      break;
-    case "D":
-      console.log("Deletar");
-      break;
-    default:
-      console.log("Opção inválida");
-  }
+    switch (menu) {
+      case "C":
+        console.log("Cadastrar");
+        break;
+      case "R":
+        console.log("Ler");
+        break;
+      case "U":
+        console.log("Atualizar");
+        break;
+      case "D":
+        console.log("Deletar");
+        break;
+      default:
+        console.log("Opção inválida");
+    }
+
+    rl.close();
+  });
 };
 
 menuDeCadastro();

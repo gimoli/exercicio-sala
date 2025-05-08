@@ -20,6 +20,11 @@ const readline = require("readline-sync");
 // });
 
 
+const readline = require("readline").createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
 const menuDeCadastro = () => {
   console.log(
     `
@@ -30,24 +35,28 @@ const menuDeCadastro = () => {
     `
   );
 
-  const menu = readline.question("Digite uma opção: ").toUpperCase();
+  readline.question("Digite uma opção: ", (resposta) => {
+    const menu = resposta.toUpperCase();
 
-  switch (menu) {
-    case "C":
-      console.log("Cadastrar");
-      break;
-    case "R":
-      console.log("Ler");
-      break;
-    case "U":
-      console.log("Atualizar");
-      break;
-    case "D":
-      console.log("Deletar");
-      break;
-    default:
-      console.log("Opção inválida");
-  }
+    switch (menu) {
+      case "C":
+        console.log("Cadastrar");
+        break;
+      case "R":
+        console.log("Ler");
+        break;
+      case "U":
+        console.log("Atualizar");
+        break;
+      case "D":
+        console.log("Deletar");
+        break;
+      default:
+        console.log("Opção inválida");
+    }
+
+    readline.close();
+  });
 };
 
 menuDeCadastro();

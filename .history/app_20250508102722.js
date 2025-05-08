@@ -21,12 +21,12 @@ const readline = require("readline-sync");
 
 
 const menuDeCadastro = () => {
-  console.log(
+  console.log (
     `
-    C) Create   (Cadastrar/Inserir)
-    R) Read     (Buscar/Ler)
-    U) Update   (Editar/Atualizar)
-    D) Delete   (Excluir/Apagar)
+    C) Create	(Cadastrar/Inserir)
+    R) Read	(Buscar/Ler)
+    U) Update	(Editar/Atualizar)
+    D) Delete	(Excluir/Apagar)
     `
   );
 
@@ -50,4 +50,3 @@ const menuDeCadastro = () => {
   }
 };
 
-menuDeCadastro();
