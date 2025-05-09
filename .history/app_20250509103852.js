@@ -1,5 +1,4 @@
 const readline = require("readline-sync");
-//                                 SO ESTA FUNCIONANDO ATE O 3!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // //pra receber valor
 // readline.question('Ola, mundo?');

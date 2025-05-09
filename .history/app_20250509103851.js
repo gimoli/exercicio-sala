@@ -1,5 +1,4 @@
 const readline = require("readline-sync");
-//                                 SO ESTA FUNCIONANDO ATE O 3!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // //pra receber valor
 // readline.question('Ola, mundo?');
@@ -249,4 +248,4 @@ const numerosPares = (array) => {
 // medio: pelo menos 3 requisitos
 // fraca: 2 requisitos
 // muito fraca: 1 requisito
-// invalida: 0 requisitos
+// invalida: 0 requisitos/
