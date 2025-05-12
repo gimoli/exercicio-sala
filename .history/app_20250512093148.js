@@ -129,49 +129,36 @@ function calculadora(numero1, numero2, operadorAritmetico) {
       return "operação invalida";
   }
 }
-const numero1 = readline.questionInt("Digite um numero:")
-const numero2 = readline.questionInt("Digite o segundo numero:")
-const operadorAritmetico = readline.question("Digite um operador:")
+// const numero1 = readline.questionInt("Digite um numero:")
+// const numero2 = readline.questionInt("Digite o segundo numero:")
+// const operadorAritmetico = readline.question("Digite um operador:")
 
-console.log(`Resultado: ${numero1} ${operadorAritmetico} ${numero2} = ${calculadora(numero1, numero2, operadorAritmetico)}`); 
+// console.log(`Resultado: ${numero1} ${operadorAritmetico} ${numero2} = ${calculadora(numero1, numero2, operadorAritmetico)}`); */
 
-// 6- Faça um programa que leia 7 nomes de pessoas e guarde-os em um vetor. 
-//No final, mostre uma listagem com todos os nomes informados, na ordem inversa daquela em que eles foram informados.
-
-
+// 6- Faça um programa que leia 7 nomes de pessoas e guarde-os em um vetor. No final, mostre uma listagem com todos os nomes informados, na ordem inversa daquela em que eles foram informados.
 const listaNomes = () => {
   let nomes = [];
-
+  let nomesInvertido = [];
   for (let i = 0; i < 7; i++) {
-    let nome = readline.question(`Digite o nome da pessoa ${i + 1}: `);
+    let nome = readline.question(`Digite o nome da pessoa ${i + 1}:`);
     nomes.push(nome);
   }
-
-  console.log("\nNomes na ordem inversa:");
-  for (let i = nomes.length - 1; i >= 0; i--) {
-    console.log(`${nomes.length - i}. ${nomes[i]}`);
+  for (let i = 6; i >= 0; i--) {
+    nomesInvertido.push(nomes[i]);
   }
+  console.log("Nome das pessoas inversamente:");
+  nomes.reverse().forEach((nome, index) => {
+    console.log(`${index + 1}${nome}`);
+  });
 };
 
-listaNomes();
+// Crie um jogo de JoKenPo (Pedra-Papel-Tesoura)
 
+// Escreva um programa que pergunte a velocidade de um carro. Caso ultrapasse 80 Km, exiba uma mensagem dizendo que o usuário foi multado. Nesse caso, exiba o valor damulta, cobrando R$ 5,00 por cada Km acima da velocidade permitida.
 
-//7- Crie um jogo de JoKenPo (Pedra-Papel-Tesoura)
+// Escreva um programa para calcular a redução do tempo de vida de um fumante. Pergunte a quantidade de cigarros fumados por dias e quantos anos ele já fumou. Considere que um fumante perde 10 min de vida a cada cigarro. Calcule quantos dias de vida um fumante perderá e exiba o total em dias.
 
-//8- Escreva um programa que pergunte a velocidade de um carro. 
-//Caso ultrapasse 80 Km, exiba uma mensagem dizendo que o usuário foi multado. 
-//Nesse caso, exiba o valor damulta, cobrando R$ 5,00 por cada Km acima da velocidade permitida.
-
-//9- Escreva um programa para calcular a redução do tempo de vida de um fumante. 
-//Pergunte a quantidade de cigarros fumados por dias e quantos anos ele já fumou. 
-//Considere que um fumante perde 10 min de vida a cada cigarro. 
-//Calcule quantos dias de vida um fumante perderá e exiba o total em dias.
-
-//10- Uma empresa de aluguel de carros precisa cobrar pelos seus serviços. 
-//O aluguel de um carro popular custa R$ 90,00 por dia e um carro de luxo custa R$ 150,00. 
-//Além disso, o cliente paga por Km percorrido. 
-//Faça um programa que leia o tipo de carro alugado (popular ou luxo), quantos dias de aluguel e quantos Km foram percorridos. 
-//No final, mostre o preço a ser pago de acordo com os dados a seguir:
+// Uma empresa de aluguel de carros precisa cobrar pelos seus serviços. O aluguel de um carro popular custa R$ 90,00 por dia e um carro de luxo custa R$ 150,00. Além disso, o cliente paga por Km percorrido. Faça um programa que leia o tipo de carro alugado (popular ou luxo), quantos dias de aluguel e quantos Km foram percorridos. No final, mostre o preço a ser pago de acordo com os dados a seguir:
 
 // Carros populares
 // Até 100 Km percorridos: R$ 0,20 por Km
@@ -191,54 +178,54 @@ listaNomes();
 const arrayMethods = (array, option) => {
   let resultado;
   switch (option) {
-    // A soma dos números
+    // A soma dos numeros
     case 1:
-      resultado = array.reduce((acc, num) => acc + num, 0);  // Corrigido
+      resultado = array.reduce((acc, num) => {
+        acc + num;
+      }, 0);
       break;
-    // Os números pares dentro da array
+    // Os numeros pares dentro da array
     case 2:
-      resultado = array.filter((n) => n % 2 === 0);  // Corrigido
+      resultado = array.filter((n) => {
+        n % 2 === 0;
+      });
       break;
-    // A média dos números
+    // A media dos numeros
     case 3:
-      const soma = array.reduce((acc, num) => acc + num, 0);  // Corrigido
-      resultado = soma / array.length;
+      resultado = array.reduce((acc, num) => {
+        acc + num;
+      }, 0);
+      resultado = resultado / array.length;
       break;
-    // A ordem crescente dos números
     case 4:
+      // A ordem crescente dos numeros
       resultado = array.sort((a, b) => a - b);
       break;
-    // Todos os números multiplicados por 2
     case 5:
-      resultado = array.map((numero) => numero * 2);
+      // Todos os numeros multiplicados por 2
+      resultado = array.map((numero) => {
+        return numero * 2;
+      });
       break;
-    default:
-      resultado = "Opção inválida!";
   }
   return resultado;
 };
 
 const listaNumeros = [12, 5, 3, 9];
 
-console.log(arrayMethods(listaNumeros, 1));  // Soma
-console.log(arrayMethods(listaNumeros, 2));  // Pares
-console.log(arrayMethods(listaNumeros, 3));  // Média
-console.log(arrayMethods(listaNumeros, 4));  // Ordem crescente
-console.log(arrayMethods(listaNumeros, 5));  // Multiplicados por 2
+console.log(arrayMethods(listaNumeros, 2));
 
 // Crie uma função que retorne a quantidade de itens de um array
+
 const qtdItensArray = (array) => {
   return array.length;
 };
 
 // Crie uma função que retorne todos os números pares deste array [1,2,3,4,5,6,7,8,9,10]
+
 const numerosPares = (array) => {
   return array.filter((n) => n % 2 === 0);
 };
-
-console.log(qtdItensArray(listaNumeros));  // Quantidade de itens
-console.log(numerosPares([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));  // Pares
-
 
 // Crie uma função que transforme frases de snake_case para camelCase
 

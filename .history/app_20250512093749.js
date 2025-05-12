@@ -191,54 +191,54 @@ listaNomes();
 const arrayMethods = (array, option) => {
   let resultado;
   switch (option) {
-    // A soma dos números
+    // A soma dos numeros
     case 1:
-      resultado = array.reduce((acc, num) => acc + num, 0);  // Corrigido
+      resultado = array.reduce((acc, num) => {
+        acc + num;
+      }, 0);
       break;
-    // Os números pares dentro da array
+    // Os numeros pares dentro da array
     case 2:
-      resultado = array.filter((n) => n % 2 === 0);  // Corrigido
+      resultado = array.filter((n) => {
+        n % 2 === 0;
+      });
       break;
-    // A média dos números
+    // A media dos numeros
     case 3:
-      const soma = array.reduce((acc, num) => acc + num, 0);  // Corrigido
-      resultado = soma / array.length;
+      resultado = array.reduce((acc, num) => {
+        acc + num;
+      }, 0);
+      resultado = resultado / array.length;
       break;
-    // A ordem crescente dos números
     case 4:
+      // A ordem crescente dos numeros
       resultado = array.sort((a, b) => a - b);
       break;
-    // Todos os números multiplicados por 2
     case 5:
-      resultado = array.map((numero) => numero * 2);
+      // Todos os numeros multiplicados por 2
+      resultado = array.map((numero) => {
+        return numero * 2;
+      });
       break;
-    default:
-      resultado = "Opção inválida!";
   }
   return resultado;
 };
 
 const listaNumeros = [12, 5, 3, 9];
 
-console.log(arrayMethods(listaNumeros, 1));  // Soma
-console.log(arrayMethods(listaNumeros, 2));  // Pares
-console.log(arrayMethods(listaNumeros, 3));  // Média
-console.log(arrayMethods(listaNumeros, 4));  // Ordem crescente
-console.log(arrayMethods(listaNumeros, 5));  // Multiplicados por 2
+console.log(arrayMethods(listaNumeros, 2));
 
 // Crie uma função que retorne a quantidade de itens de um array
+
 const qtdItensArray = (array) => {
   return array.length;
 };
 
 // Crie uma função que retorne todos os números pares deste array [1,2,3,4,5,6,7,8,9,10]
+
 const numerosPares = (array) => {
   return array.filter((n) => n % 2 === 0);
 };
-
-console.log(qtdItensArray(listaNumeros));  // Quantidade de itens
-console.log(numerosPares([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));  // Pares
-
 
 // Crie uma função que transforme frases de snake_case para camelCase
 
